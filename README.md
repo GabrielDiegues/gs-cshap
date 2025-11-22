@@ -171,6 +171,7 @@ A API segue princípios de:
 * Autenticação e autorização usando middleware
 * Stateless server usando JWT
 
+<img width="9071" height="3642" alt="image" src="https://github.com/user-attachments/assets/544b0037-c5de-4dca-a12d-aad890b06872" />
 ---
 
 ## 🛡️ Segurança
@@ -197,3 +198,4 @@ A API segue princípios de:
 
 Distribuído sob a licença MIT.
 Sinta-se livre para usar no seu projeto!
+
