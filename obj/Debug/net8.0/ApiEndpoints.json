@@ -1,0 +1,319 @@
+[
+  {
+    "ContainingType": "SkillUpPlus.Controllers.ApiUserController",
+    "Method": "Login",
+    "RelativePath": "api/v1/ApiUser/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "SkillUpPlus.Dtos.LoginDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SkillUpPlus.Controllers.AppUserController",
+    "Method": "CreateAppUser",
+    "RelativePath": "api/v1/AppUser",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "newUser",
+        "Type": "SkillUpPlus.Models.AppUser",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SkillUpPlus.Models.AppUser",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SkillUpPlus.Controllers.AppUserController",
+    "Method": "GetAppUser",
+    "RelativePath": "api/v1/AppUser/{appUserId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "appUserId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SkillUpPlus.Dtos.AppUserDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SkillUpPlus.Controllers.AppUserProgressController",
+    "Method": "GetAppUserProgress",
+    "RelativePath": "api/v1/AppUserProgress",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "appUserId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "learningPathId",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SkillUpPlus.Dtos.AppUserProgressDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SkillUpPlus.Controllers.AppUserProgressController",
+    "Method": "GetFilteredUserProgresses",
+    "RelativePath": "api/v1/AppUserProgress",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "learningPaths",
+        "Type": "System.Collections.Generic.List\u00601[[SkillUpPlus.Models.LearningPath, SkillUpPlus, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[SkillUpPlus.Models.AppUserProgress, SkillUpPlus, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SkillUpPlus.Controllers.AppUserProgressController",
+    "Method": "UpdateProgressPercentage",
+    "RelativePath": "api/v1/AppUserProgress/update-percentage",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "appUserId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "learningPathId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "newProgressPercentage",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SkillUpPlus.Controllers.AppUserProgressController",
+    "Method": "UpdateStatus",
+    "RelativePath": "api/v1/AppUserProgress/update-status",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "appUserId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "learningPathId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "newStatus",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SkillUpPlus.Controllers.LearningPathController",
+    "Method": "GetAllLearningPaths",
+    "RelativePath": "api/v1/LearningPath",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[SkillUpPlus.Models.LearningPath, SkillUpPlus, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SkillUpPlus.Controllers.LearningPathController",
+    "Method": "GetLearningPath",
+    "RelativePath": "api/v1/LearningPath/{learningPathId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "learningPathId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SkillUpPlus.Models.LearningPath",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SkillUpPlus.Controllers.SkillAssessmentController",
+    "Method": "GetSkillAssessmentItems",
+    "RelativePath": "api/v1/SkillAssessment",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "appUserId",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[SkillUpPlus.Dtos.SkillAssessmentItemDto, SkillUpPlus, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SkillUpPlus.Controllers.SkillAssessmentController",
+    "Method": "CreateSkillAssessmentItem",
+    "RelativePath": "api/v1/SkillAssessment",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "SkillUpPlus.Dtos.SkillAssessmentItemCreateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SkillUpPlus.Dtos.SkillAssessmentItemDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SkillUpPlus.Controllers.SkillAssessmentController",
+    "Method": "DeleteSkillAssessment",
+    "RelativePath": "api/v1/SkillAssessment",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SkillUpPlus.Controllers.WeatherForecastController",
+    "Method": "Get",
+    "RelativePath": "WeatherForecast",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[SkillUpPlus.WeatherForecast, SkillUpPlus, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetWeatherForecast"
+  }
+]

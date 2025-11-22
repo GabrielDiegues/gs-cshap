@@ -1,0 +1,6 @@
+@SkillUpPlus_HostAddress = http://localhost:5133
+
+GET {{SkillUpPlus_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
